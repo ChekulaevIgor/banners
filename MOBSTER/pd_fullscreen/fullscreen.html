@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="scale-type" content="1">
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="width" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="address=no"/>
+        
+        <script src="https://mobster.agency/files/js/adhelper.min.js"></script>
+        <!--<script src="/files/js/adhelper.min.js"></script>-->
+        
+        <script>
+            _MBSTR.closeBtnStyle([255,255,255,1],[0,0,0,0],'0px','0px');
+            window.images = {};
+            [
+                
+                /* ======= Images ======= */
+                
+                {src:"images/boshka.png", id:"boshka"},
+		{src:"images/jopa.png", id:"jopa"},
+		{src:"images/ruka.png", id:"ruka"},
+		{src:"images/stol.png", id:"stol"},
+		{src:"images/txt.png", id:"txt"},
+		{src:"images/txt2.png", id:"txt2"}
+
+                /* ======= Images ======= */
+                
+                
+            ].forEach(function(i){
+                var img = new Image();
+                img.src = i.src;
+                images[i.id] = img;
+            });
+        </script>
+        <style id="DO_NOT_EDIT">#main_wrapper,#wrapper_background{position:absolute;width:100%;height:100%;left:0;top:0}#content_box,#main_wrapper{overflow:hidden;transform:translateZ(0);-webkit-transform:translateZ(0)}#main_wrapper{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;text-decoration:none}#wrapper_background{z-index:1;background-color:rgba(0,0,0,.6);transition-duration:.4s;-webkit-transition-duration:.4s;-moz-transition-duration:.4s;-ms-transition-duration:.4s;-o-transition-duration:.4s}#content_box{position:absolute;width:94%;height:70%;left:3%;z-index:2;-webkit-box-shadow:0 20px 50px 0 rgba(0,0,0,.5);box-shadow:0 20px 50px 0 rgba(0,0,0,.5);transition-duration:.7s;-webkit-transition-duration:.7s;-moz-transition-duration:.7s;-ms-transition-duration:.7s;-o-transition-duration:.7s}#canvas{position:absolute;left:0;top:0;z-index: 2;}.hide_box{opacity:0;top:70%}.show_box{opacity:1;top:15%}.hide_bg{opacity:0}.show_bg{opacity:1}</style>
+        
+        <!-------- Custom Styles -------->
+        
+        <style>
+            .content_box{
+                background: rgba(255,255,255,1);
+            }
+            
+            .canvas{
+               z-index: 1;
+            }
+            
+            #back{
+                position:   absolute;
+                width: 100%;
+                height: 100%;
+                background  : url(images/bg.jpg) center no-repeat;
+                background-size: cover;
+                z-index: 0;
+            }
+        </style>
+        
+        <!-------- Custom Styles -------->
+        
+        <script src="https://mobster.agency/files/js/createjs-29.03.17.min.js"></script>
+        <!--<script src="/files/js/createjs-29.03.17.min.js"></script>-->  
+        
+        <script src="fullscreen.js"></script>
+    </head>
+    <body style="margin:0px;">
+        <div id="main_wrapper">
+            <div id="content_box" class="content_box hide_box">
+               
+                <!--Content-->
+                
+                <canvas id="canvas" class="canvas"></canvas>
+                <div id="back"></div>
+                
+                <!--Content-->
+                
+            </div>
+            <div id="wrapper_background" class="hide_bg"></div>
+        </div>
+    </body>
+    <script>
+        var c = document.querySelector('#canvas'), cb = document.querySelector('#content_box');
+        stage = new createjs.Stage(c);
+        stage.addChild(new lib.fullscreen());	
+        (RC = () => {			
+            var stage_s = _MBSTR.windowSize(), w = stage_s.iw * 0.94, h = stage_s.ih * 0.7, p = window.devicePixelRatio;
+            stage.scaleX = stage.scaleY = p;
+            c.width = w * p; c.height = h * p;
+            c.style.width =  w + 'px'; c.style.height = h + 'px';
+
+            /* Custom Resize ===>
+
+            ...
+
+            <=== Custom Resize */
+
+        })();
+        window.addEventListener('resize', RC);		
+        createjs.Ticker.setFPS(30);
+        createjs.Ticker.addEventListener("tick", stage);
+        cb.classList.toggle('show_box');
+        document.querySelector('#wrapper_background').classList.toggle('show_bg');
+        cb.addEventListener('click', _MBSTR.targetURL);
+
+        /* Custom ===>
+
+        ...
+
+        <=== Custom */
+        
+    </script>
+</html>
