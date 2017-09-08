@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            var canvas, stage, exportRoot, fnStartAnimation, imgSrc, sScale;
+            window.images = {};
+            function getWindowSize() {
+                return {
+                    iw: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
+                    ih: Math.min(document.documentElement.clientHeight, window.innerHeight || 0),
+                }
+            }
+            window.contentPreferences = {"horizontalMiddle":false,"verticalMiddle":false,"reScale":false}
+            imgSrc = [{"src":"images/btn.png","id":"btn","loadTimeout":8000,"ext":"png","type":"image","path":""},{"src":"images/footb_05.png","id":"footb_05","loadTimeout":8000,"ext":"png","type":"image","path":""},{"src":"images/footb_07.png","id":"footb_07","loadTimeout":8000,"ext":"png","type":"image","path":""},{"src":"images/logo.png","id":"logo","loadTimeout":8000,"ext":"png","type":"image","path":""},{"src":"images/service.png","id":"service","loadTimeout":8000,"ext":"png","type":"image","path":""},{"src":"images/service1.png","id":"service1","loadTimeout":8000,"ext":"png","type":"image","path":""},{"src":"images/service2.png","id":"service2","loadTimeout":8000,"ext":"png","type":"image","path":""},{"src":"images/service3.png","id":"service3","loadTimeout":8000,"ext":"png","type":"image","path":""},{"src":"images/stad.jpg","id":"stad","loadTimeout":8000,"ext":"jpg","type":"image","path":""}]
+            function setImg(id, path) {
+                var img = new Image();
+                img.src = path;
+                images[id] = img;
+            }
+            for (i = 0; i < imgSrc.length; i++) { 
+                var data = imgSrc[i];
+                setImg(data.id, data.src);
+            }
+        </script>
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="index.js"></script>
+        <style>
+            body, #scene{overflow: hidden;}
+            #scene, canvas, #apearBox, #canvasBox > div {
+                position: absolute;
+                width: 100%; height: 100%;
+                top: 0; left: 0;
+            }
+            #apearBox{
+                transition-duration: 500ms;
+                -webkit-transition-duration: 500ms;
+            }
+            #canvasBox {position: absolute;}
+            .add {opacity: 1;}
+            .remove {opacity: 0;}
+        </style>
+        <style>
+    #canvasBox {
+        background-color: rgba(255, 255, 255, 1.00);
+    }
+</style>
+    </head>
+    <body onload="init();">
+        <div id="apearBox" class="remove">
+            <div id="scene">
+                <div id="canvasBox">
+                <div>
+                    <canvas id="canvas"></canvas>
+                    <div id="canvas_bg">
+                        <!--Add Content-->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function init() {
+            canvasBox = document.getElementById("canvasBox");
+            canvas = document.getElementById("canvas");
+            apearBox = document.getElementById("apearBox");
+            createjs.MotionGuidePlugin.install();
+            handleComplete();
+        }
+        function handleComplete(evt) {
+            exportRoot = new lib.index();
+            stage = new createjs.Stage(canvas);
+            stage.addChild(exportRoot);	
+            fnStartAnimation = function() {
+                createjs.Ticker.setFPS(lib.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage);
+                apearBox.classList.remove("remove");
+		           apearBox.classList.add("add");
+            }
+            SetCanvas = function() {
+            sScale = getWindowSize();
+            window.bannerS = { w: 1920, h: 200}
+               var p = window.devicePixelRatio;
+                stage.scaleX = stage.scaleY = p;
+                canvas.width = bannerS.w * p; canvas.height = bannerS.h * p;
+                canvasBox.style.width = bannerS.w + "px";
+                canvasBox.style.height = bannerS.h + "px";
+                canvasBox.style.left = 0 + "px";
+                canvasBox.style.top = 0 + "px";
+            }
+            SetCanvas();
+            fnStartAnimation();
+        }
+    </script>
+</html>
