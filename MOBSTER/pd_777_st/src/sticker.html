@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="scale-type" content="0.35">
+        
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="width" />
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="address=no"/>
+        
+        <script src="https://mobster.agency/files/js/adhelper.min.js"></script>
+        <!--<script src="/files/js/adhelper.min.js"></script>-->
+        
+        <script>
+            window.images = {};
+            var IMGS = [
+                
+                /* ------------------------------- Images ------------------------------- */
+                
+                    {src:"images/btn.png", id:"btn"},
+                    {src:"images/cards.png", id:"cards"},
+                    {src:"images/chip.png", id:"chip"},
+                    {src:"images/iphone.png", id:"iphone"},
+                    {src:"images/logo.png", id:"logo"},
+                    {src:"images/txt1.png", id:"txt1"},
+                    {src:"images/txt2.png", id:"txt2"} 
+
+                
+                /* ------------------------------- Images ------------------------------- */
+                
+            ];
+            for(var i = 0; i < IMGS.length; i++){
+                var img = new Image();
+                img.src = IMGS[i].src;
+                images[IMGS[i].id] = img;
+            }
+        </script>
+        <style id="DO_NOT_EDIT">#main_wrapper{position:absolute;width:100%;height:100%;left:0;top:0}#content_box,#main_wrapper{overflow:hidden;transform:translateZ(0);-webkit-transform:translateZ(0)}#main_wrapper{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;text-decoration:none}#content_box{position:absolute;width:100%;height:100%;left:0;z-index:2;-webkit-box-shadow:0 20px 50px 0 rgba(0,0,0,.5);box-shadow:0 20px 50px 0 rgba(0,0,0,.5);transition-duration:.7s;-webkit-transition-duration:.7s;-moz-transition-duration:.7s;-ms-transition-duration:.7s;-o-transition-duration:.7s}#canvas{position:absolute;width:100%;height:100%;left:0;top:0}.hide_box{opacity:0;top:70%}.show_box{opacity:1;top:0}</style>
+        
+        <!------------------------------->
+        <!-------- Custom Styles -------->
+        
+        <style>
+            
+            #back{
+                width:100%;
+                height:100%;
+                position:absolute;
+                background: url(images/bg.jpg) center no-repeat;
+                background-size: cover;
+                z-index: 0;
+            }
+            
+            .content_box{
+                background-color: rgba(255,255,255,1);
+            }
+            
+            .canvas{
+               z-index: 1;
+            }
+            
+        </style>
+        
+        <!-------- Custom Styles -------->
+        <!------------------------------->
+        
+        <script src="https://mobster.agency/files/js/createjs-29.03.17.min.js"></script>
+        <!--<script src="/files/js/createjs-29.03.17.min.js"></script>-->  
+        
+        <script src="sticker.js"></script>
+    </head>
+    <body style="margin:0px;">
+        <div id="main_wrapper">
+            <div id="content_box" class="content_box hide_box">
+               
+                <!----------------------->
+                <!--------Content-------->
+                
+                <canvas id="canvas" class="canvas"></canvas>
+                <div id="back"></div>
+                
+                <!--------Content-------->
+                <!----------------------->
+                
+            </div>
+        </div>
+    </body>
+    <script>
+        var c = document.querySelector('#canvas'), cb = document.querySelector('#content_box'), _RS;
+        stage = new createjs.Stage(c);
+        stage.addChild(new lib.sticker());	
+        
+        (_RS = function(){			
+            var stage_s = _MBSTR.windowSize(), w = stage_s.iw, h = stage_s.ih, p = window.devicePixelRatio;
+            stage.scaleX = stage.scaleY = p;
+            c.width = w * p; c.height = h * p;
+
+            /* Custom Resize Scripts ------------------------------- > */
+
+            
+
+            /* < ------------------------------- Custom Resize Scripts */
+
+        })();
+        window.addEventListener('resize', _RS);	
+        
+        createjs.Ticker.setFPS(30);
+        createjs.Ticker.addEventListener("tick", stage);
+        
+        cb.classList.toggle('show_box');
+        cb.addEventListener('click', _MBSTR.targetURL);
+
+        /* Custom Scripts ------------------------------- > */
+
+        
+
+        /* < ------------------------------- Custom Scripts */
+        
+    </script>
+</html>
