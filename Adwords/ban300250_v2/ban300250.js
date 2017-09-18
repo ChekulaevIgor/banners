@@ -148,7 +148,7 @@ p.nominalBounds = new cjs.Rectangle(-123,-21,246,42);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.text = new cjs.Text(txt1, "bold 23px 'Intro Black Alt'", "#FFFFFF");
+	this.text = new cjs.Text(txt2, "bold 23px 'Intro Black Alt'", "#FFFFFF");
 	this.text.lineHeight = 25;
 	this.text.lineWidth = 177;
 	this.text.parent = this;
@@ -442,13 +442,13 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/baba.png?1505745983218", id:"baba"},
-		{src:"images/baba2.png?1505745983218", id:"baba2"},
-		{src:"images/banka.png?1505745983218", id:"banka"},
-		{src:"images/bg.jpg?1505745983218", id:"bg"},
-		{src:"images/btn.png?1505745983218", id:"btn"},
-		{src:"images/circle.png?1505745983218", id:"circle"},
-		{src:"images/logo.png?1505745983218", id:"logo"}
+		{src:"images/baba.png?1505749768130", id:"baba"},
+		{src:"images/baba2.png?1505749768130", id:"baba2"},
+		{src:"images/banka.png?1505749768130", id:"banka"},
+		{src:"images/bg.jpg?1505749768130", id:"bg"},
+		{src:"images/btn.png?1505749768130", id:"btn"},
+		{src:"images/circle.png?1505749768130", id:"circle"},
+		{src:"images/logo.png?1505749768130", id:"logo"}
 	],
 	preloads: []
 };
