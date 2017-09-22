@@ -168,6 +168,19 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
+(lib.Символ56 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.instance = new lib.btn();
+	this.instance.parent = this;
+	this.instance.setTransform(-148,-63.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Символ56, new cjs.Rectangle(-148,-63.5,296,127), null);
+
+
 (lib.Символ55 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -228,19 +241,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Символ51, new cjs.Rectangle(-314,-157,628,314), null);
-
-
-(lib.Символ47 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Слой 1
-	this.instance = new lib.btn();
-	this.instance.parent = this;
-	this.instance.setTransform(-148,-63.5);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib.Символ47, new cjs.Rectangle(-148,-63.5,296,127), null);
 
 
 (lib.Символ46 = function(mode,startPosition,loop) {
@@ -677,14 +677,22 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 }).prototype = getMCSymbolPrototype(lib.Символ50, new cjs.Rectangle(-314,-157,628,314), null);
 
 
-(lib.Символ48 = function(mode,startPosition,loop) {
+(lib.Символ47 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// Слой 1
-	this.instance = new lib.Символ47();
+	// Слой 1 - копия
+	this.instance = new lib.Символ56();
 	this.instance.parent = this;
+	this.instance.alpha = 0.18;
+	this.instance.compositeOperation = "lighter";
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({scaleX:1.07,scaleY:1.07},0).wait(1).to({scaleX:1.02,scaleY:1.02},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({alpha:0},14,cjs.Ease.get(1)).to({alpha:0.18},15,cjs.Ease.get(1)).wait(1));
+
+	// Слой 1
+	this.instance_1 = new lib.Символ56();
+	this.instance_1.parent = this;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(30));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-148,-63.5,296,127);
@@ -808,19 +816,6 @@ p.nominalBounds = new cjs.Rectangle(-89,-110.5,178,221);
 }).prototype = getMCSymbolPrototype(lib.Символ17, new cjs.Rectangle(-64.3,-19.6,128.6,39.3), null);
 
 
-(lib.Символ8 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Слой 1
-	this.instance = new lib.Символ48();
-	this.instance.parent = this;
-	new cjs.ButtonHelper(this.instance, 0, 1, 2);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib.Символ8, new cjs.Rectangle(-158.5,-68,317,136), null);
-
-
 (lib.Символ7 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -834,6 +829,32 @@ p.nominalBounds = new cjs.Rectangle(-89,-110.5,178,221);
 p.nominalBounds = new cjs.Rectangle(-105,-25,209.9,50.4);
 
 
+(lib.Символ48 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.instance = new lib.Символ47();
+	this.instance.parent = this;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({scaleX:1.07,scaleY:1.07},0).wait(1).to({scaleX:1.02,scaleY:1.02},0).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-148,-63.5,296,127);
+
+
+(lib.Символ8 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.instance = new lib.Символ48();
+	this.instance.parent = this;
+	new cjs.ButtonHelper(this.instance, 0, 1, 2);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Символ8, new cjs.Rectangle(-158.4,-68,317,136), null);
+
+
 (lib.Символ9 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -841,7 +862,7 @@ p.nominalBounds = new cjs.Rectangle(-105,-25,209.9,50.4);
 	this.instance = new lib.Символ8();
 	this.instance.parent = this;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:0.95,scaleY:0.95},19,cjs.Ease.get(-1)).to({scaleX:0.89,scaleY:0.89},20,cjs.Ease.get(1)).to({scaleX:0.95,scaleY:0.95},20,cjs.Ease.get(-1)).to({scaleX:1,scaleY:1},20,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:0.95,scaleY:0.95},7,cjs.Ease.get(-1)).to({scaleX:0.89,scaleY:0.89},7,cjs.Ease.get(1)).to({scaleX:0.95,scaleY:0.95},7,cjs.Ease.get(-1)).to({scaleX:1,scaleY:1},8,cjs.Ease.get(1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-148,-63.5,296,127);
@@ -1219,30 +1240,30 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bg1.jpg?1506010239910", id:"bg1"},
-		{src:"images/bg2.jpg?1506010239910", id:"bg2"},
-		{src:"images/bg3.jpg?1506010239910", id:"bg3"},
-		{src:"images/bg4.jpg?1506010239910", id:"bg4"},
-		{src:"images/bilb.png?1506010239910", id:"bilb"},
-		{src:"images/bilbao.png?1506010239910", id:"bilbao"},
-		{src:"images/bor.png?1506010239910", id:"bor"},
-		{src:"images/borussia.png?1506010239910", id:"borussia"},
-		{src:"images/btn.png?1506010239910", id:"btn"},
-		{src:"images/city.png?1506010239910", id:"city"},
-		{src:"images/cl.png?1506010239910", id:"cl"},
-		{src:"images/dynamo.png?1506010239910", id:"dynamo"},
-		{src:"images/el.png?1506010239910", id:"el"},
-		{src:"images/kiev.png?1506010239910", id:"kiev"},
-		{src:"images/logo.png?1506010239910", id:"logo"},
-		{src:"images/mc.png?1506010239910", id:"mc"},
-		{src:"images/part.png?1506010239910", id:"part"},
-		{src:"images/partizan.png?1506010239910", id:"partizan"},
-		{src:"images/rea.png?1506010239910", id:"rea"},
-		{src:"images/real.png?1506010239910", id:"real"},
-		{src:"images/shakh.png?1506010239910", id:"shakh"},
-		{src:"images/shakhtar.png?1506010239910", id:"shakhtar"},
-		{src:"images/zar.png?1506010239910", id:"zar"},
-		{src:"images/zarya.png?1506010239910", id:"zarya"}
+		{src:"images/bg1.jpg?1506069557140", id:"bg1"},
+		{src:"images/bg2.jpg?1506069557140", id:"bg2"},
+		{src:"images/bg3.jpg?1506069557140", id:"bg3"},
+		{src:"images/bg4.jpg?1506069557140", id:"bg4"},
+		{src:"images/bilb.png?1506069557140", id:"bilb"},
+		{src:"images/bilbao.png?1506069557140", id:"bilbao"},
+		{src:"images/bor.png?1506069557140", id:"bor"},
+		{src:"images/borussia.png?1506069557140", id:"borussia"},
+		{src:"images/btn.png?1506069557141", id:"btn"},
+		{src:"images/city.png?1506069557141", id:"city"},
+		{src:"images/cl.png?1506069557141", id:"cl"},
+		{src:"images/dynamo.png?1506069557141", id:"dynamo"},
+		{src:"images/el.png?1506069557141", id:"el"},
+		{src:"images/kiev.png?1506069557141", id:"kiev"},
+		{src:"images/logo.png?1506069557141", id:"logo"},
+		{src:"images/mc.png?1506069557141", id:"mc"},
+		{src:"images/part.png?1506069557141", id:"part"},
+		{src:"images/partizan.png?1506069557141", id:"partizan"},
+		{src:"images/rea.png?1506069557141", id:"rea"},
+		{src:"images/real.png?1506069557141", id:"real"},
+		{src:"images/shakh.png?1506069557141", id:"shakh"},
+		{src:"images/shakhtar.png?1506069557141", id:"shakhtar"},
+		{src:"images/zar.png?1506069557141", id:"zar"},
+		{src:"images/zarya.png?1506069557141", id:"zarya"}
 	],
 	preloads: []
 };
