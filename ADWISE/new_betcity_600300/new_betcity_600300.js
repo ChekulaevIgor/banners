@@ -1053,7 +1053,7 @@ p.nominalBounds = new cjs.Rectangle(-380,-159.2,746.4,335.4);
 
 
 // stage content:
-(lib.betcity600300 = function(mode,startPosition,loop) {
+(lib.new_betcity_600300 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
@@ -1085,25 +1085,25 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/atletico.png?1506351373796", id:"atletico"},
-		{src:"images/bg.jpg?1506351373796", id:"bg"},
-		{src:"images/btn1.png?1506351373796", id:"btn1"},
-		{src:"images/chelsea.png?1506351373796", id:"chelsea"},
-		{src:"images/cska.png?1506351373796", id:"cska"},
-		{src:"images/dzagoev.png?1506351373796", id:"dzagoev"},
-		{src:"images/griezmann.png?1506351373796", id:"griezmann"},
-		{src:"images/koko.png?1506351373796", id:"koko"},
-		{src:"images/logo.png?1506351373796", id:"logo"},
-		{src:"images/loverpool.png?1506351373796", id:"loverpool"},
-		{src:"images/mkhitaryan.png?1506351373796", id:"mkhitaryan"},
-		{src:"images/morata.png?1506351373796", id:"morata"},
-		{src:"images/mu.png?1506351373796", id:"mu"},
-		{src:"images/promise.png?1506351373796", id:"promise"},
-		{src:"images/reals.png?1506351373796", id:"reals"},
-		{src:"images/rs.png?1506351373796", id:"rs"},
-		{src:"images/salah.png?1506351373796", id:"salah"},
-		{src:"images/spartak.png?1506351373796", id:"spartak"},
-		{src:"images/zenit.png?1506351373796", id:"zenit"}
+		{src:"images/atletico.png?1506351866968", id:"atletico"},
+		{src:"images/bg.jpg?1506351866968", id:"bg"},
+		{src:"images/btn1.png?1506351866968", id:"btn1"},
+		{src:"images/chelsea.png?1506351866968", id:"chelsea"},
+		{src:"images/cska.png?1506351866968", id:"cska"},
+		{src:"images/dzagoev.png?1506351866968", id:"dzagoev"},
+		{src:"images/griezmann.png?1506351866968", id:"griezmann"},
+		{src:"images/koko.png?1506351866968", id:"koko"},
+		{src:"images/logo.png?1506351866968", id:"logo"},
+		{src:"images/loverpool.png?1506351866968", id:"loverpool"},
+		{src:"images/mkhitaryan.png?1506351866968", id:"mkhitaryan"},
+		{src:"images/morata.png?1506351866968", id:"morata"},
+		{src:"images/mu.png?1506351866968", id:"mu"},
+		{src:"images/promise.png?1506351866968", id:"promise"},
+		{src:"images/reals.png?1506351866968", id:"reals"},
+		{src:"images/rs.png?1506351866968", id:"rs"},
+		{src:"images/salah.png?1506351866968", id:"salah"},
+		{src:"images/spartak.png?1506351866968", id:"spartak"},
+		{src:"images/zenit.png?1506351866968", id:"zenit"}
 	],
 	preloads: []
 };
