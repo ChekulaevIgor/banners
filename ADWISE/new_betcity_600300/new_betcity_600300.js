@@ -164,6 +164,18 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 }).prototype = getMCSymbolPrototype(lib.Символ56, new cjs.Rectangle(-113,-39,224.9,77.3), null);
 
 
+(lib.Символ53 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AizBqIAGgcQAKABAHgBQAHgBAEgEQAGgFAIgUIAxiYICGAAIgsDRIgjAAIAmiyIhEAAIgnB6QgGATgGAMQgHAMgKAHQgJAGgNACIgLAAQgJAAgMgBgAB4BmQgUgKgIgHIgKgNQgFgGgDgIQgDgIgCgJQgCgJAAgKQAAgPADgMQADgOAGgMQAFgLAIgLQAHgKAKgIQAJgJALgGQAKgHAMgEQAMgFAMgCQAMgCANAAQAQAAAOAEQAOAFALAIQALAJAHANQAGATABAMIghAAQgBgKgFgIQgEgHgIgEQgHgFgKgCQgIgCgLAAQgKAAgIACQgJABgIAEIgPAIIgNALQgPASgEALQgIAWAAAMQgBANAEALQAEALAHAJQAIAIALAEQALAFAOAAQALAAAKgDQAKgDAJgFQAKgFAHgIQAIgIAGgKIAiAAIgJASIgLAQQgSARgKAFQgOAJgRAEQgQAEgRAAQgYgCgKgDgAEgBqIAsjSIAjAAIggCMICdiMIANAAIgtDRIgiAAIAgiOIieCPgAlKBpIAsjRICAAAIgHAfIhcAAIgMA3IBYAAIgHAeIhYAAIgMA9IBeAAIgHAggAmhBpIARhNIgdAEQgOAAgLgBQgLgBgIgEQgJgEgGgGQgGgFgEgJQgEgHgBgLQgCgKABgOQABgNADgRIAIgiIAjAAIgIAiQgFAYABAPQAAAIADAGQACAGAEAEQAEAEAGADQAGABAIABQALABAfgEIAWhnIAiAAIgsDRg");
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Символ53, new cjs.Rectangle(-50.5,-10.7,101,21.5), null);
+
+
 (lib.Символ52 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -212,18 +224,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Символ45, new cjs.Rectangle(-111.4,-141.4,214.4,319.8), null);
-
-
-(lib.Символ44 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Слой 1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#FFFFFF").s().p("AmtJJQgNgFgIgJQgIgIgDgNQgCgNADgRIAfAAQgCAJACAIQABAHAEAFQAFAFAIADQAHACALAAQAKAAAKgDQAJgDAIgFQAHgGAEgIQAFgIAAgJQgBgHgDgGQgCgFgGgFQgEgDgIgDQgGgCgIAAIgPAAIAGgcIAOAAQAJAAAHgDQAIgCAGgFQAGgFAEgGQAEgHAAgHQAAgMgIgHQgJgGgOAAQgOAAgLAGQgFADgEAFQgEAFgCAHIggAAQACgOAJgKQAGgKAMgHQAKgHANgDQANgDANAAQAOAAALADQAKAEAIAGQAHAGAEAJQAEAJAAALQAAAJgDAIQgDAIgFAIQgFAHgGAFQgHAGgIADQANAGAHAKQAHALAAAPQAAAIgCAIQgCAIgDAHIgIANIgLALQgNAKgRAFQgYAFgOAAQgQAAgNgEgABtJJIAtjTIAiAAIggCNICdiNIANAAIgsDSIgjAAIAhiPIifCQgAF1JIIAmizIg9AAIAGgfICcAAIgGAfIg9AAIgmCzgAAWJIIAThdIhfAAIgUBdIgiAAIAsjSIAjAAIgSBVIBfAAIAThVIAjAAIgtDSgAkZJIIAtjSICAAAIgHAfIhdAAIgLA3IBYAAIgHAfIhYAAIgMA9IBeAAIgHAggAKOl1QgJgBgJgEQgHgDgHgEQgHgFgHgGQgFgGgFgIQgEgHgDgJIgDgTQgBgKABgMQABgOADgNQAEgMAFgLQAGgMAIgJQAIgKAJgIQAJgIALgGQAKgGALgEQAMgEAMgCQAMgCAMAAQALAAAXAGIAOAHIANAKQAGAFAFAHIAHAPIAFARQACAJAAAKQAAAOgCAOQgEANgEAMQgFALgIALQgHAKgJAJQgJAJgLAHQgLAGgMAFQgMAFgNACQgNADgOAAgAKpomQgUALgJAHQgHAGgFAIQgFAHgEAIQgEAJgDAKQgCAJAAALQgCAQAFAMQADALAIAHQAHAIALADQALAEANAAQALAAAXgHIAPgIIAPgKIALgNQAGgIAEgIQAEgJACgKQADgJgBgLQABgOgEgLQgDgLgIgIQgHgIgLgEQgLgEgNAAQgXACgLAEgAmql2IAHgcQAKABAGgBQAHgBAFgEQAFgFAIgUIAyiZICGAAIgsDSIgkAAIAnizIhFAAIgnB7QgFATgHAMQgHAMgKAHQgJAGgNACIgLABQgJAAgMgCgACXl2IAsjTIAjAAIggCNICdiNIANAAIgtDSIgiAAIAgiPIieCQgAICl3IgqhcQgHACgOABIgWABIgTBYIgjAAIAtjSIAjAAIgTBdIAXgBQAMgBAHgDQANgHAVgrQAFgKAHgIQAGgJAJgFQAKgFALgCQAMgBAPACIgFAZQgPgCgIAFQgJAFgIAQQgWArgRANIAwBkIgBAFgAAYl3IAnizIg9AAIAGgfICdAAIgHAfIg9AAIgmCzgAi6l3IAtjSICAAAIgIAfIhcAAIgLA3IBXAAIgGAfIhYAAIgNA9IBfAAIgIAggAoTl3IAnizIg9AAIAGgfICcAAIgHAfIg9AAIgmCzgAp3l3IgKgrIhiAAIgeArIglAAIABgEICNjPIAQAAIA1DPIgBAEgAqGnAIgVhUIg2BUIBLAAg");
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib.Символ44, new cjs.Rectangle(-80.7,-58.9,161.4,117.9), null);
 
 
 (lib.Символ43 = function(mode,startPosition,loop) {
@@ -567,6 +567,26 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 p.nominalBounds = new cjs.Rectangle(-113,-39,224.9,77.3);
 
 
+(lib.Символ44 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 4
+	this.instance = new lib.Символ53();
+	this.instance.parent = this;
+	this.instance.setTransform(0,47.9);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AKOBrQgJgCgJgDQgHgDgHgEIgIgGIgGgGQgFgFgFgIQgEgHgDgKIgDgSQgBgLABgLQABgNADgNQAEgMAFgLQAGgMAIgJQAIgKAJgIQAJgIALgGQAKgGALgEQAMgFAMgCQAMgCAMAAQALAAAXAHIAOAGIANALQAGAFAFAHIAHAPIAFAQQACAKAAAKQAAAOgCANQgEANgEALQgFAMgIALQgHAKgJAIQgJAJgLAIIgDABQgJAGgLAEQgMAEgNADQgNADgOgBgAKphFQgUALgJAHQgHAGgFAIQgFAGgEAJQgEAJgDAKQgCAIAAALQgCAPAFANQADALAIAHQAHAHALAEQALAEANAAQALAAAXgHIAPgIIAPgKIALgOQAGgHAEgIQAEgJACgKQADgIgBgLQABgOgEgMQgDgKgIgIQgHgIgLgEQgLgEgNAAQgXACgLAEgAmqBqIAHgcQAKABAGgBQAHgCAFgDQAFgFAIgUIAyiYICGAAIgsDRIgkAAIAniyIhFAAIgnB6QgFATgHAMQgHAMgKAGQgJAHgNACIgLAAQgJAAgMgBgACXBqIAsjSIAjAAIggCLICdiMIANAAIgtDSIgiAAIAgiOIieCPgAICBpIgqhcQgHACgOABIgWABIgTBYIgjAAIAtjRIAjAAIgTBdIAXgBQAMgBAHgDQANgHAVgrQAFgLAHgHQAGgJAJgFQAKgGALgBQAMgBAPACIgFAYQgPgBgIAEQgJAGgIAQQgWAqgRANIAwBkIgBAFgAAYBpIAniyIg9AAIAGgfICdAAIgHAfIg9AAIgmCygAi6BpIAtjRICAAAIgIAfIhcAAIgLA3IBXAAIgGAeIhYAAIgNA9IBfAAIgIAggAoTBpIAniyIg9AAIAGgfICcAAIgHAfIg9AAIgmCygAp3BpIgKgrIhiAAIgeArIglAAIABgFICNjOIAQAAIA1DOIgBAFgAqGAgIgVhTIg2BTIBLAAg");
+	this.shape.setTransform(0,-48.1);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Символ44, new cjs.Rectangle(-80.7,-58.9,161.4,117.6), null);
+
+
 (lib.Символ40 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -708,7 +728,7 @@ p.nominalBounds = new cjs.Rectangle(-64,-82,128.1,205.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ12, new cjs.Rectangle(-58.1,-44.5,116.2,84.9), null);
+}).prototype = getMCSymbolPrototype(lib.Символ12, new cjs.Rectangle(-58.1,-44.5,116.2,84.6), null);
 
 
 (lib.Символ10 = function(mode,startPosition,loop) {
@@ -1085,25 +1105,25 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/atletico.png?1506351866968", id:"atletico"},
-		{src:"images/bg.jpg?1506351866968", id:"bg"},
-		{src:"images/btn1.png?1506351866968", id:"btn1"},
-		{src:"images/chelsea.png?1506351866968", id:"chelsea"},
-		{src:"images/cska.png?1506351866968", id:"cska"},
-		{src:"images/dzagoev.png?1506351866968", id:"dzagoev"},
-		{src:"images/griezmann.png?1506351866968", id:"griezmann"},
-		{src:"images/koko.png?1506351866968", id:"koko"},
-		{src:"images/logo.png?1506351866968", id:"logo"},
-		{src:"images/loverpool.png?1506351866968", id:"loverpool"},
-		{src:"images/mkhitaryan.png?1506351866968", id:"mkhitaryan"},
-		{src:"images/morata.png?1506351866968", id:"morata"},
-		{src:"images/mu.png?1506351866968", id:"mu"},
-		{src:"images/promise.png?1506351866968", id:"promise"},
-		{src:"images/reals.png?1506351866968", id:"reals"},
-		{src:"images/rs.png?1506351866968", id:"rs"},
-		{src:"images/salah.png?1506351866968", id:"salah"},
-		{src:"images/spartak.png?1506351866968", id:"spartak"},
-		{src:"images/zenit.png?1506351866968", id:"zenit"}
+		{src:"images/atletico.png?1506352818594", id:"atletico"},
+		{src:"images/bg.jpg?1506352818594", id:"bg"},
+		{src:"images/btn1.png?1506352818594", id:"btn1"},
+		{src:"images/chelsea.png?1506352818594", id:"chelsea"},
+		{src:"images/cska.png?1506352818594", id:"cska"},
+		{src:"images/dzagoev.png?1506352818594", id:"dzagoev"},
+		{src:"images/griezmann.png?1506352818594", id:"griezmann"},
+		{src:"images/koko.png?1506352818594", id:"koko"},
+		{src:"images/logo.png?1506352818594", id:"logo"},
+		{src:"images/loverpool.png?1506352818594", id:"loverpool"},
+		{src:"images/mkhitaryan.png?1506352818594", id:"mkhitaryan"},
+		{src:"images/morata.png?1506352818594", id:"morata"},
+		{src:"images/mu.png?1506352818594", id:"mu"},
+		{src:"images/promise.png?1506352818594", id:"promise"},
+		{src:"images/reals.png?1506352818594", id:"reals"},
+		{src:"images/rs.png?1506352818594", id:"rs"},
+		{src:"images/salah.png?1506352818594", id:"salah"},
+		{src:"images/spartak.png?1506352818594", id:"spartak"},
+		{src:"images/zenit.png?1506352818594", id:"zenit"}
 	],
 	preloads: []
 };
