@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <script src="cs_case_builder.min.js"></script>   <!-------   <=    case images holder   -->
+        <script src="case_data_storage.js"></script>     <!-------   <=   case builder engine   -->
+        
+        <style>
+            body {
+                margin: 0;
+            }
+            
+            /* ----- <div class="case-anim-item" ... - case container styles ----- */
+            
+            .case-anim-item {
+                
+                width : 240px;
+                height: 192px;
+                
+                
+                /* ------ Edit This -----> */
+                
+                display: inline-block;
+                box-sizing: border-box;
+                border: solid 1px rgb(157, 157, 157);
+                margin: 10px;
+                
+                /* <----- Edit This ------ */
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div id="case_box">
+            
+            <!--  [class="case-anim-item"]   -   "case-anim-item"     -     case container class name (important)                  -->
+            <!--  [data-case-type=...]       -   "..."                -     object width default preferences from case type        -->
+            <!--  [data-case-src=...]        -   "..."                -     object width case preferences from case images holder  -->
+            
+            <div class="case-anim-item" data-case-type="cs-case" data-case-src="cs-blue"></div>
+            <div class="case-anim-item" data-case-type="cs-case" data-case-src="cs-bronze"></div>
+            <div class="case-anim-item" data-case-type="cs-case" data-case-src="cs-silver"></div>
+            <div class="case-anim-item" data-case-type="cs-case" data-case-src="cs-gold"></div>
+            
+        </div>
+        
+        <script>
+            
+            /*  
+            
+                AnimCasesSetUp() --> Initilize Styles 
+                .Run(type, default_images, data_holder) --> Run Builder
+                
+            */
+            
+            AnimCasesSetUp().Run('cs-case', cs_case_default_images, animated_case_data_holder);
+        </script>
+        
+    </body>
+</html>
