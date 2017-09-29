@@ -428,36 +428,24 @@ p.nominalBounds = new cjs.Rectangle(-101.5,-33,203,66);
 (lib.binarium240400_v1 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// timeline functions:
-	this.frame_0 = function() {
-		document.addEventListener("click", fl_ClickToGoToWebPage);
-		
-		function fl_ClickToGoToWebPage() {
-		window.open(clickTAG, "_blank");
-		}
-	}
-
-	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
-
 	// Слой 5
 	this.instance = new lib.Символ11();
 	this.instance.parent = this;
-	this.instance.setTransform(121.9,142.8);
+	this.instance.setTransform(121.9,162.8);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	// Слой 4
 	this.instance_1 = new lib.Символ7();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(120,45.1);
+	this.instance_1.setTransform(120,53.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
 	// Слой 2
 	this.instance_2 = new lib.Символ8();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(119.5,357);
+	this.instance_2.setTransform(121.4,329);
 	new cjs.ButtonHelper(this.instance_2, 0, 1, 2);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
@@ -465,7 +453,7 @@ p.nominalBounds = new cjs.Rectangle(-101.5,-33,203,66);
 	// Слой 3
 	this.instance_3 = new lib.Символ6();
 	this.instance_3.parent = this;
-	this.instance_3.setTransform(445.5,236.5);
+	this.instance_3.setTransform(445.5,216.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
 
