@@ -894,7 +894,7 @@ p.nominalBounds = new cjs.Rectangle(-78.3,-30,156.6,92.8);
 	this.instance.parent = this;
 	this.instance.setTransform(0,-9.1);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({rotation:-3.3},149,cjs.Ease.get(-1)).to({rotation:-7},150,cjs.Ease.get(1)).to({regX:0.1,regY:-0.1,rotation:-3.3,x:0.1,y:-9.2},150,cjs.Ease.get(-1)).to({regX:0,regY:0,rotation:0,x:0,y:-9.1},150,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({regX:0.1,regY:-0.1,scaleX:1.04,scaleY:1.04,rotation:-3.3,x:0.1,y:-16.4},299,cjs.Ease.get(1)).to({regX:0,regY:0,scaleX:1,scaleY:1,rotation:0,x:0,y:-9.1},300,cjs.Ease.get(1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-119.5,-55.6,239,93);
@@ -908,7 +908,7 @@ p.nominalBounds = new cjs.Rectangle(-119.5,-55.6,239,93);
 	this.instance.parent = this;
 	this.instance.setTransform(0,8.3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({rotation:3.1,y:8.4},149,cjs.Ease.get(-1)).to({rotation:6.5,y:8.3},150,cjs.Ease.get(1)).to({regY:0.1,rotation:3.1,y:8.4},150,cjs.Ease.get(-1)).to({regY:0,rotation:0,y:8.3},150,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({rotation:2.5,y:14.4},299,cjs.Ease.get(1)).to({rotation:0,y:8.3},300,cjs.Ease.get(1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-172.5,-38.2,345,93);
@@ -1097,14 +1097,14 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bg.jpg?1507822245450", id:"bg"},
-		{src:"images/btn.png?1507822245450", id:"btn"},
-		{src:"images/diz.png?1507822245450", id:"diz"},
-		{src:"images/diztxt.png?1507822245450", id:"diztxt"},
-		{src:"images/logo.png?1507822245450", id:"logo"},
-		{src:"images/oxy.png?1507822245450", id:"oxy"},
-		{src:"images/oxytxt.png?1507822245450", id:"oxytxt"},
-		{src:"images/smoke1.png?1507822245450", id:"smoke1"}
+		{src:"images/bg.jpg?1507822731047", id:"bg"},
+		{src:"images/btn.png?1507822731047", id:"btn"},
+		{src:"images/diz.png?1507822731047", id:"diz"},
+		{src:"images/diztxt.png?1507822731047", id:"diztxt"},
+		{src:"images/logo.png?1507822731047", id:"logo"},
+		{src:"images/oxy.png?1507822731047", id:"oxy"},
+		{src:"images/oxytxt.png?1507822731047", id:"oxytxt"},
+		{src:"images/smoke1.png?1507822731047", id:"smoke1"}
 	],
 	preloads: []
 };
