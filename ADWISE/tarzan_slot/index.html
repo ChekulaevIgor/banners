@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <script>
+            window.images = {};
+            var IMGS = [
+                {src:"images/bonus.png", id:"bonus"},
+                {src:"images/btn_active.png", id:"btn_active"},
+                {src:"images/btn_norm.png", id:"btn_norm"},
+                {src:"images/frame.png", id:"frame"},
+                {src:"images/girl.png", id:"girl"},
+                {src:"images/ilk.png", id:"ilk"},
+                {src:"images/para.png", id:"para"},
+                {src:"images/thiusand.png", id:"thiusand"},
+                {src:"images/wheel.png", id:"wheel"},
+                {src:"images/yatırma.png", id:"yatırma"}
+            ];
+            for(var i = 0; i < IMGS.length; i++){
+                var img = new Image();
+                img.src = IMGS[i].src;
+                images[IMGS[i].id] = img;
+            }
+        </script>
+        
+        <style>
+            body {
+                margin: 0;
+            }
+            
+            #container {
+                position: absolute;
+                width: 270px; height: 184px;
+                top: 0; left: 0;
+                overflow: hidden;
+                background-color: rgb(0,0,0);
+            }
+            
+            #content, #content > div, #frame > div, #dark {
+                position: absolute;
+                width: 100%; height: 100%;
+                top: 0; left: 0;
+            }
+            
+            canvas {
+                position: absolute;
+                top: 0; left: 0;
+                z-index: 3;
+            }
+            
+            #frame {
+                z-index: 4;
+            }
+            
+            #frame > div {
+                box-sizing: border-box;
+            }
+            
+            #red {
+                border: solid 2px rgb(255,0,0);
+                z-index: 2;
+                
+                animation: flashing 600ms infinite alternate;
+                -webkit-animation: flashing 600ms infinite alternate;
+            }
+            
+            #yellow {
+                border: solid 2px rgb(255,228,0);
+                z-index: 1;
+            }
+            
+            #dark {
+                z-index: 2;
+                
+                background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%);
+                background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%);
+                background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%);
+                background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%);
+                background-image: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%);
+            }
+            
+            #bg {
+                z-index: 1;
+                
+                transition: opacity 600ms;
+                -webkit-transition: opacity 600ms;
+                -moz-transition: opacity 600ms;
+                -ms-transition: opacity 600ms;
+                -o-transition: opacity 600ms;
+            }
+            
+            #bg > div {
+                position: absolute;
+                width: 140%; height: 140%;
+                top: -20%; left: -20%;
+                
+                background: url(images/bg.jpg) center no-repeat;
+                background-size: cover;
+                
+                animation: scale-bg 3000ms infinite alternate;
+                -webkit-animation: scale-bg 3000ms infinite alternate;
+                
+                animation-timing-function: linear;
+                -webkit-animation-timing-function: linear;
+            }
+            
+            .out {
+                opacity: 1;
+            }
+            
+            .over {
+                opacity: 0.3;
+            }
+            
+            @keyframes flashing {
+                from{opacity: 1;}to{opacity: 0}
+            }
+            
+            @-webkit-keyframes flashing {
+                from{opacity: 1;}to{opacity: 0}
+            }
+            
+            @keyframes scale-bg {
+                from{transform: scale(1); -webkit-transform: scale(1);}to{transform: scale(1.2); -webkit-transform: scale(1.2);}
+            }
+            
+            @-webkit-keyframes scale-bg {
+                from{transform: scale(1); -webkit-transform: scale(1);}to{transform: scale(1.2); -webkit-transform: scale(1.2);}
+            }
+        </style>
+        
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="index.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <div id="container">
+            <div id="content">
+                <div id="frame">
+                    <div id="red"></div>
+                    <div id="yellow"></div>
+                </div>
+                <canvas></canvas>
+                <div id="dark"></div>
+                <div id="bg" class="out">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    
+    <script>
+        var c = document.querySelector('canvas'),
+            stage = new createjs.Stage(c),
+            w = lib.properties.width,
+            h = lib.properties.height,
+            p = window.devicePixelRatio;
+        
+        stage.addChild(new lib.index());
+        c.width = w * p; c.height = h * p;
+        c.style.width = w; c.style.height = h;
+        
+        var fps = lib.properties.fps, 
+        now, 
+        then = new Date().getTime(), 
+        interval = 1000/fps, 
+        delta, Run,
+
+        _RAF = (function(){
+          return  window.requestAnimationFrame       ||
+                  window.webkitRequestAnimationFrame ||
+                  window.mozRequestAnimationFrame    ||
+                  window.oRequestAnimationFrame      ||
+                  window.msRequestAnimationFrame     ||
+                  window.ieRequestAnimationFrame     ||
+                  function( callback ){
+                    window.setTimeout(callback, 1000 / fps);
+                  };
+        })();
+
+        createjs.Ticker.setFPS(fps);
+
+        (Run = function() {
+            now = new Date().getTime();
+            delta = now - then;
+            delta > interval ? (function(){
+                then = now - (delta % interval);
+                stage.update();
+            })() : false;
+            _RAF(Run);
+        })();
+        
+        var container = document.getElementById('container');
+        container.addEventListener('mouseover', function(){
+            document.querySelector('#bg').classList.toggle('over');
+        });
+
+        container.addEventListener('mouseout', function(){
+            document.querySelector('#bg').classList.toggle('over');
+        });
+        
+    </script>
+    
+</html>
